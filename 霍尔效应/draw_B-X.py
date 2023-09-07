@@ -21,8 +21,8 @@ if U[8]<0:
 
 plt.figure(figsize = (20,12))
 
-plt.xlabel("x/cm")
-plt.ylabel("B/T")
+plt.xlabel("x/cm", fontsize=16)
+plt.ylabel("B/T", fontsize=16)
 
 
 gap = np.linspace(2,28,26000)
@@ -36,8 +36,8 @@ line = model(gap)
 
 
 plt.plot(gap, line)
-plt.xticks(np.arange(1,29,1))
-plt.yticks(np.arange(0.014,0.032,0.002))
+plt.xticks(np.arange(1,29,1), fontsize=16)
+plt.yticks(np.arange(0.014,0.032,0.002), fontsize=16)
 plt.savefig("./B-X.png")
 plt.show()
 
