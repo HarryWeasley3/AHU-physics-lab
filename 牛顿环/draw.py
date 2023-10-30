@@ -19,10 +19,12 @@ coefficients = np.polyfit(m, Dm2, 1)
 polynomial = np.poly1d(coefficients)
 x_fit = np.linspace(min(m), max(m), 100)
 y_fit = polynomial(x_fit)
+print("slop=",coefficients[0])   # 获取图像斜率
+
 
 plt.figure(figsize = (20,12))
-plt.xlabel("m / mm", fontsize=16)
-plt.ylabel("Dm^2 / mm^2", fontsize=16)
+plt.xlabel("m", fontsize=16)
+plt.ylabel("Dm^2 / mm^2", fontsize=18)
 
 plt.plot(x_fit, y_fit, color='red')
 plt.scatter(m,Dm2)
